@@ -7,6 +7,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+import java.math.*;
 
 import static android.widget.Toast.LENGTH_SHORT;
 
@@ -114,6 +115,35 @@ public class MainActivity extends ActionBarActivity {
         operador="/";
         onClickOperacionCapturaNumero1(miView);
     }
+    public void onClickSen(View miView)
+    {
+        operador="Sen";
+        onClickOperacionCapturaNumero1(miView);
+    }
+
+    public void onClickCos(View miView)
+    {
+        operador="Cos";
+        onClickOperacionCapturaNumero1(miView);
+    }
+
+    public void onClickRaiz(View miView)
+    {
+        operador="Raiz";
+        onClickOperacionCapturaNumero1(miView);
+    }
+
+    public void onClickPotencia(View miView)
+    {
+        operador="Potencia";
+        onClickOperacionCapturaNumero1(miView);
+    }
+
+    public void onClickResi(View miView)
+    {
+        operador="Resi";
+        onClickOperacionCapturaNumero1(miView);
+    }
 
     public void onClickIgual(View miView)
     {
@@ -130,6 +160,16 @@ public class MainActivity extends ActionBarActivity {
                 resultado = numero1 * numero2;
             } else if (operador.equals("/")) {
                 resultado = numero1 / numero2;
+            }else if(operador.equals("Sen")){
+                resultado = Math.sin(numero1);
+            }else if(operador.equals("Cos")){
+                resultado = Math.cos(numero1);
+            }else if(operador.equals("Resi")){
+                resultado = numero1 % numero2;
+            }else if(operador.equals("Raiz")){
+                resultado = Math.pow(numero1, 1.0/numero2);
+            }else if(operador.equals("Potencia")) {
+                resultado = Math.pow(numero1, numero2);
             }
             tv.setText(resultado.toString());
         }catch(NumberFormatException nfe){

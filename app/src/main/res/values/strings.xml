@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">Practica1_Calculadora</string>
-
+    <string name="app_name">Practica1_Calculadora_Angel_Gutierrez</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 </resources>
